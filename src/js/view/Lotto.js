@@ -3,7 +3,7 @@ import { LOTTO_ICON } from '../util/Constant.js';
 /**
  * @param {number[]} lottos
  */
-export function setLottos(lottos = []) {
+export function setLottos(lottos) {
   const $lottoItems = lottos.map((lotto) => getLottoItem(lotto));
   const $lottoList = getLottoList($lottoItems);
   const $lottoIcons = document.querySelector('.lotto-icons');
@@ -16,7 +16,7 @@ export function setLottos(lottos = []) {
  * @param {HTMLElement} $lottoItems
  * @returns {HTMLElement}
  */
-export function getLottoList($lottoItems = []) {
+export function getLottoList($lottoItems) {
   const $lottoList = document.createElement('ul');
   $lottoList.classList.add('d-flex', 'flex-wrap');
   $lottoItems.forEach(($item) => $lottoList.appendChild($item));
@@ -28,7 +28,7 @@ export function getLottoList($lottoItems = []) {
  * @param {number[]} lottos
  * @returns {HTMLElement}
  */
-export function getLottoItem(lotto = []) {
+export function getLottoItem(lotto) {
   const $lottoItem = document.createElement('li');
   $lottoItem.innerHTML = `
     <span class="mx-1 text-4xl lotto-icon">${LOTTO_ICON}</span>

@@ -10,7 +10,7 @@ import { $bonusNumber, $earningRate, $winningNumbers } from './Selector.js';
  * @param {number[]} lottos
  * @returns {import('../util/LottoResult.js').LottoResult}
  */
-export const getMyLottoResult = (lottos = []) => {
+export const getMyLottoResult = (lottos) => {
   const inputWinningNumbers = Array.from($winningNumbers).map(($number) => $number.value);
   const inputBonusNumber = $bonusNumber.value;
   validateNumbers([...inputWinningNumbers, inputBonusNumber]);
@@ -25,7 +25,7 @@ export const getMyLottoResult = (lottos = []) => {
  * @param {number[]} lottos
  * @param {import('../util/LottoResult.js').LottoResult} lottoResult
  */
-export const updateLottoResult = (lottos = [], lottoResult) => {
+export const updateLottoResult = (lottos, lottoResult) => {
   // 모듈 글자 렌더링하기
   const getSelector = (selectorName) => `${selectorName} > td${MODAL_RESULT_TR_COLUMN}:last-child`;
   const updateText = (selector, text) => (document.querySelector(selector).innerText = text);

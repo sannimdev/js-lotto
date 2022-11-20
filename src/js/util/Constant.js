@@ -1,3 +1,5 @@
+// 참조 횟수가 중요한 게 아니라 숫자, string의 의미를 정의하는 것이 중요하다
+
 export const MESSAGE = {
   INVALID_AMOUNT_MIN: '최소 금액은 1,000원부터 구매가 가능합니다',
   INVALID_AMOUNT_UNIT: '구매 금액은 1,000원 단위로만 입력이 가능합니다',
@@ -15,3 +17,12 @@ export const CARDINAL_NUMBER = {
   five: 5,
   six: 6,
 };
+export const LOTTO_PRIZE = {
+  three: 5_000,
+  four: 50_000,
+  five: 1_500_000,
+  six: 2_000_000_000,
+  bonus: 30_000_000,
+};
+
+export const PERCENTAGE = 100;
